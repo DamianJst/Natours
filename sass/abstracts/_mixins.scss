@@ -13,25 +13,20 @@
 	transform: translate(-50%, -50%);
 }
 
-//MEDIA QUERY MANAGER
+//---------------------------------------------------------------------------------------------------//
 
-/*
-0 - 600px :			Phone
-600 - 900px :		Tablet Porttrait
-900 - 1200px :		Tablet Landscape
-1200 - 1800px+ :	Large Desktop
-*/
+// MEDIA QUERY WORFLOW ORDER: Base + Typography > general layout + grid > page layout > components
 
-/*
-$breakpoint argument choices
--phone
-- tab-port
-- tab-land
-- big-desktop
+//---------------------------------------------------------------------------------------------------//
 
-ORDER: Base + Typography > general layout + grid > page layout > components
+//MEDIA QUERY MANAGER:
 
-*/
+// $breakpoint argument choices
+
+// - Phone 				-->>> 0 - 600px :		phone
+// - Tablet Porttrait  	-->>> 600 - 900px :		tab-port
+// - Tablet Landscape  	-->>> 900 - 1200px :	tab-land
+// - Large Desktop	 	-->>> 1200 - 1800px+ :	big-desktop
 
 @mixin respond($breakpoint) {
 	@if $breakpoint == phone {
@@ -58,3 +53,5 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 		} //1800px
 	}
 }
+
+//---------------------------------------------------------------------------------------------------//
